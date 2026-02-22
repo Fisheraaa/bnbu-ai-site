@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNBU AI Association</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif-title': ['"Cormorant Garamond"', 'serif'],
+                        'sans-body': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-gold': '#CBAF87',
+                        'deep-black': '#050505', 
+                    },
+                    letterSpacing: {
+                        'ultra-wide': '.4em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #d1d5db; font-family: 'Montserrat', sans-serif; }
+        
+        /* Starfield Canvas Positioning */
+        #starfield {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
+        }
+
+        /* Text Gradient */
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #EED3A4, #CBAF87);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Minimalist Card Style */
+        .hk-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(203, 175, 135, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hk-card:hover {
+            border-color: rgba(203, 175, 135, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="font-sans-body antialiased">
+
+    <canvas id="starfield"></canvas>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-end">
+        <div class="flex items-center text-[10px] tracking-[0.3em] uppercase border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-md">
+            <a href="index.html" class="text-gray-500 hover:text-white transition duration-500">中</a>
+            <span class="mx-3 text-gray-700">|</span>
+            <span class="text-dark-gold font-semibold">EN</span>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 z-10">
+        <p class="text-[10px] md:text-xs tracking-ultra-wide uppercase mb-12 opacity-60">
+            A Journey Through Intelligence
+        </p>
+
+        <h1 class="font-serif-title text-6xl md:text-9xl font-light leading-tight">
+            <span class="text-white">BNBU</span><br>
+            <span class="gold-gradient-text italic font-medium">AI Association</span>
+        </h1>
+
+        <div class="h-20 w-px bg-dark-gold/40 my-12"></div>
+
+        <div class="space-y-4">
+            <h2 class="text-xl md:text-2xl font-light tracking-[0.4em] text-white/90">
+                · BNBU AI ASSOCIATION ·
+            </h2>
+            <p class="text-sm md:text-base font-light tracking-widest text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                Dedicated to reducing AI (Artificial Intelligence) anxiety, we provide a solid foundation for your exploration of research, career, and entrepreneurial dreams through practice and collaborative learning.
+            </p>
+        </div>
+    </section>
+
+    <main class="relative z-10 max-w-screen-xl mx-auto px-6 py-32">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="hk-card p-12 flex flex-col justify-between min-h-[400px]">
+                <div>
+                    <h3 class="font-serif-title text-3xl text-white mb-6 italic tracking-wider">01. Activity Upgrade</h3>
+                    <div class="w-10 h-px bg-dark-gold/50 mb-8"></div>
+                    <p class="text-sm text-gray-400 leading-8 font-light tracking-wide">
+                        Online, we refine collaborative learning sessions to reduce AI anxiety; Offline, we host exciting Hackathons for members to Build Together through practice.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <span class="text-dark-gold text-[10px] tracking-widest uppercase opacity-60">Upcoming Event →</span>
+                </div>
+            </div>
+
+            <div class="hk-card p-12 flex flex-col justify-between min-h-[400px]">
+                <div>
+                    <h3 class="font-serif-title text-3xl text-white mb-6 italic tracking-wider">02. Demand Oriented</h3>
+                    <div class="w-10 h-px bg-dark-gold/50 mb-8"></div>
+                    <p class="text-sm text-gray-400 leading-8 font-light tracking-wide">
+                        Whether you seek AI for efficiency, internship and research opportunities, or have entrepreneurial dreams, the association will be your strongest support.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <span class="text-dark-gold text-[10px] tracking-widest uppercase opacity-60">Our Mission →</span>
+                </div>
+            </div>
+
+            <div class="hk-card p-12 flex flex-col justify-between min-h-[400px]">
+                <div>
+                    <h3 class="font-serif-title text-3xl text-white mb-6 italic tracking-wider">03. Our Services</h3>
+                    <div class="w-10 h-px bg-dark-gold/50 mb-8"></div>
+                    <p class="text-sm text-gray-400 leading-8 font-light tracking-wide">
+                        We are committed to serving every member. Connecting resources, sharing knowledge, and moving forward together in the wave of Artificial Intelligence.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <span class="text-dark-gold text-[10px] tracking-widest uppercase opacity-60">Join Us →</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative z-10 py-24 text-center px-4">
+        <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase leading-relaxed">
+            © 2026 BNBU AI Association. <br class="md:hidden"> Beijing Normal University - Hong Kong Baptist University.
+        </p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
+
+        function init() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            stars = [];
+            for (let i = 0; i < 150; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    size: Math.random() * 1.2,
+                    opacity: Math.random(),
+                    speed: Math.random() * 0.05
+                });
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(203, 175, 135, ${star.opacity})`;
+                ctx.fill();
+                // Extremely slow floating effect
+                star.y -= star.speed;
+                if (star.y < 0) star.y = height;
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init(); animate();
+    </script>
+</body>
+</html>
